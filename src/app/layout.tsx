@@ -1,8 +1,10 @@
+import { Sidebar } from "@/components/shared";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Figtree } from "next/font/google";
+import { cn } from "@/libs";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Figtree({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Carlos Gallardo | FullStack Developer",
@@ -16,7 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={inter.className}>{children}</body>
+      <body className={cn("bg-dark text-gray-300", font.className)}>
+        <Sidebar />
+        <main className="pl-[16vw]">{children}</main>
+      </body>
     </html>
   );
 }
