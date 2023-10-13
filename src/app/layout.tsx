@@ -1,4 +1,3 @@
-import { Sidebar } from "@/components/shared";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
@@ -19,8 +18,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={cn("bg-dark text-gray-300", font.className)}>
-        <Sidebar />
-        <main className="pl-[16vw]">{children}</main>
+        {children}
       </body>
     </html>
   );
