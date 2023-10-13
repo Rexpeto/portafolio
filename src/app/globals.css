@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,
+body,
+:root {
+  @apply h-full;
+}
+
+/* Sidebar */
+.sidebar {
+  @apply fixed bg-dark w-[16vw] h-full border-r border-gray-800/50;
+}
+
+.sidebar__link {
+  @apply p-4 flex gap-3;
+}
+
+.sidebar__link-title {
+  @apply text-lg text-white group-hover:text-primary transition duration-150;
+}
+
+.sidebar__link-subtitle {
+  @apply text-sm text-gray-400 font-light;
+}
