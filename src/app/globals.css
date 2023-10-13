@@ -10,11 +10,11 @@ body,
 
 /* Sidebar */
 .sidebar {
-  @apply fixed bg-dark w-[16vw] h-full border-r border-gray-800/50;
+  @apply fixed top-0 bg-dark backdrop-blur-md w-[70vw] z-50 lg:left-0 md:w-[40vw] lg:w-[16vw] h-full border-r border-gray-800/50 transition-all ease-in-out duration-300;
 }
 
 .sidebar__link {
-  @apply p-4 flex gap-3;
+  @apply p-4 flex gap-3 border-b border-gray-800/50;
 }
 
 .sidebar__link-title {
@@ -23,4 +23,12 @@ body,
 
 .sidebar__link-subtitle {
   @apply text-sm text-gray-400 font-light;
+}
+
+.nav {
+  @apply flex flex-col;
+}
+
+.nav__link {
+  @apply flex items-center gap-4 text-gray-500 hover:text-white hover:bg-gray-600/5 px-6 py-5 lg:py-3 border-b border-gray-800/50 transition duration-150;
 }
