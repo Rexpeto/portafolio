@@ -1,9 +1,9 @@
-import { Me, SliderLogo } from "./components";
+import { SectionHero, SliderLogo } from "./sections";
 
 const Home = () => {
   return (
     <>
-      <Me />
+      <SectionHero />
       <SliderLogo />
     </>
   );
