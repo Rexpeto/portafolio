@@ -22,7 +22,7 @@ export default function MainLayout({
         <GetIcon icon="RiMenuLine" className="text-xl" />
       </button>
 
-      <main className="pl-[16vw] h-full container mx-auto py-5 lg:py-8">
+      <main className="lg:pl-[16vw] h-full container px-4 lg:mx-auto py-5 lg:py-8">
         {children}
       </main>
     </>
