@@ -32,3 +32,16 @@ body,
 .nav__link {
   @apply flex items-center gap-4 text-gray-500 hover:text-white hover:bg-gray-600/5 px-6 py-5 lg:py-3 border-b border-gray-800/50 transition duration-150;
 }
+
+/* Slider */
+.slider {
+  @apply relative m-auto overflow-hidden p-4 mt-6 before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-[linear-gradient(to_right,#121212_5%,rgba(255,255,255,0)_100%)] before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:bg-[linear-gradient(to_right,#121212_5%,rgba(255,255,255,0)_100%)] after:content-[''] after:-scale-x-100 border-y border-gray-800/50;
+}
+
+.slider__content {
+  @apply animate-infinite-slider flex w-[calc(250px*10)];
+}
+
+.slider__content-logo {
+  @apply flex w-[125px] items-center justify-center;
+}
