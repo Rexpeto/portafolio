@@ -1,7 +1,12 @@
-import { Me } from "./components";
+import { Me, SliderLogo } from "./components";
 
 const Home = () => {
-  return <Me />;
+  return (
+    <>
+      <Me />
+      <SliderLogo />
+    </>
+  );
 };
 
 export default Home;
