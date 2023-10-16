@@ -16,5 +16,7 @@ export const Logos = [
   { name: "MySQL", icon: "SiMysql" },
   { name: "MongoDB", icon: "SiMongodb" },
   { name: "PostgreSQL", icon: "SiPostgresql" },
+  { name: "Prisma", icon: "SiPrisma" },
+  { name: "Mongoose", icon: "SiMongoose" },
   { nam: "Postman", icon: "SiPostman" },
 ];
