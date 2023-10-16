@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const SectionHero = () => {
   return (
-    <section className="container px-4 lg:mx-auto">
+    <section className="section__container">
       <div className="relative h-20 w-20 mb-10">
         <Image
           className="rounded-sm object-cover"

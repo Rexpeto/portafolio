@@ -7,12 +7,12 @@ const SliderLogo = () => {
       <div className="slider__content">
         {Logos.map((logo, index) => (
           <div className="slide slider__content-logo" key={index}>
-            <GetIcon icon={logo.icon} className="text-3xl" />
+            <GetIcon icon={logo.icon} className="slider__content-logo-icon" />
           </div>
         ))}
         {Logos.map((logo, index) => (
           <div className="slide slider__content-logo" key={index}>
-            <GetIcon icon={logo.icon} className="text-3xl" />
+            <GetIcon icon={logo.icon} className="slider__content-logo-icon" />
           </div>
         ))}
       </div>
