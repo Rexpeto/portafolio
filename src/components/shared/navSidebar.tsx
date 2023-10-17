@@ -2,10 +2,9 @@ import { LinksMenu } from "@/models";
 import Link from "next/link";
 import { GetIcon } from "../ui";
 import { cn } from "@/libs";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 const NavSidebar = () => {
-  const router = useRouter();
   const pathname = usePathname();
 
   return (
