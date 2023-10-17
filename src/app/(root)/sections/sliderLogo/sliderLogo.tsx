@@ -7,12 +7,18 @@ const SliderLogo = () => {
       <div className="slider__content">
         {Logos.map((logo, index) => (
           <div className="slide slider__content-logo" key={index}>
-            <GetIcon icon={logo.icon} className="slider__content-logo-icon" />
+            <GetIcon
+              icon={logo.icon}
+              className={`slider__content-logo-icon ${logo.color}`}
+            />
           </div>
         ))}
         {Logos.map((logo, index) => (
           <div className="slide slider__content-logo" key={index}>
-            <GetIcon icon={logo.icon} className="slider__content-logo-icon" />
+            <GetIcon
+              icon={logo.icon}
+              className={`slider__content-logo-icon ${logo.color}`}
+            />
           </div>
         ))}
       </div>
