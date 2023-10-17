@@ -33,6 +33,168 @@ body,
   @apply bg-gray-300/80;
 }
 
+/* Colors badges */
+.badges-js {
+  @apply bg-[#F0DB4F] text-black;
+}
+
+.badges-typescript {
+  @apply bg-[#3178C6] text-white;
+}
+
+.badges-css {
+  @apply bg-[#264de4] text-white;
+}
+
+.badges-react {
+  @apply bg-[#61DBFB] text-black border-gray-700;
+}
+
+.badges-tailwind {
+  @apply bg-[#38B2AC] text-white;
+}
+
+.badges-bash {
+  @apply bg-[#4e342e] text-white;
+}
+
+.badges-sql {
+  @apply bg-[#007A98] text-white;
+}
+
+.badges-next {
+  @apply bg-[#000] text-white;
+}
+
+.badges-remix {
+  @apply bg-[#000] text-white;
+}
+
+.badges-redux {
+  @apply bg-[#7E57C2] text-white;
+}
+
+.badges-sass {
+  @apply bg-[#CC6699] text-white;
+}
+
+.badges-node {
+  @apply bg-[#339933] text-white;
+}
+
+.badges-express {
+  @apply bg-[#000] text-white;
+}
+
+.badges-docker {
+  @apply bg-[#2496ED] text-white;
+}
+
+.badges-mysql {
+  @apply bg-[#0070c0] text-white;
+}
+
+.badges-mongo {
+  @apply bg-[#4DB33D] text-white;
+}
+
+.badges-postgresql {
+  @apply bg-[#336791] text-white;
+}
+
+.badges-prisma {
+  @apply bg-[#000] text-white;
+}
+
+.badges-mongoose {
+  @apply bg-[#4DB33D] text-white;
+}
+
+.badges-postman {
+  @apply bg-[#000] text-white;
+}
+
+/* colors tecnology */
+.color-js {
+  @apply hover:text-[#F0DB4F];
+}
+
+.color-typescript {
+  @apply hover:text-[#3178C6];
+}
+
+.color-bash {
+  @apply hover:text-[#4e342e];
+}
+
+.color-sql {
+  @apply hover:text-[#007A98];
+}
+
+.color-react {
+  @apply hover:text-[#61DBFB];
+}
+
+.color-next {
+  @apply hover:text-white;
+}
+
+.color-remix {
+  @apply hover:text-white;
+}
+
+.color-redux {
+  @apply hover:text-[#7E57C2];
+}
+
+.color-sass {
+  @apply hover:text-[#CC6699];
+}
+
+.color-css {
+  @apply hover:text-[#264de4];
+}
+
+.color-tailwind {
+  @apply hover:text-[#38B2AC];
+}
+
+.color-node {
+  @apply hover:text-[#339933];
+}
+
+.color-express {
+  @apply hover:text-white;
+}
+
+.color-docker {
+  @apply hover:text-[#2496ED];
+}
+
+.color-mysql {
+  @apply hover:text-[#0070c0];
+}
+
+.color-mongo {
+  @apply hover:text-[#4DB33D];
+}
+
+.color-postgresql {
+  @apply hover:text-[#336791];
+}
+
+.color-prisma {
+  @apply hover:text-white;
+}
+
+.color-moongose {
+  @apply hover:text-[#4DB33D];
+}
+
+.color-postman {
+  @apply hover:text-[#EF5B25];
+}
+
 /* Sidebar */
 .sidebar {
   @apply fixed top-0 bg-dark backdrop-blur-md w-[70vw] z-50 lg:left-0 md:w-[40vw] lg:w-[16vw] h-full border-r border-gray-800/50 transition-all ease-in-out duration-200;
@@ -72,5 +234,5 @@ body,
 }
 
 .slider__content-logo-icon {
-  @apply text-3xl hover:text-white transition duration-150;
+  @apply text-3xl  transition duration-150;
 }
