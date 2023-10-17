@@ -13,7 +13,7 @@ body,
 }
 
 .section__container {
-  @apply container lg:mx-auto px-4;
+  @apply container lg:mx-auto px-4 mb-4;
 }
 
 /* Scrollbar */
@@ -218,6 +218,10 @@ body,
 
 .nav__link {
   @apply flex items-center gap-4 text-gray-500 hover:text-white hover:bg-gray-600/5 px-6 py-5 lg:py-3 border-b border-gray-800/50 transition duration-150;
+}
+
+.nav__link.active {
+  @apply text-white bg-gray-600/5;
 }
 
 /* Slider */
