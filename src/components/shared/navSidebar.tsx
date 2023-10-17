@@ -2,16 +2,28 @@ import { LinksMenu } from "@/models";
 import Link from "next/link";
 import { GetIcon } from "../ui";
 import { cn } from "@/libs";
+import { usePathname, useRouter } from "next/navigation";
 
 const NavSidebar = () => {
+  const router = useRouter();
+  const pathname = usePathname();
+
   return (
     <nav className="nav">
-      {LinksMenu.map((links) => (
-        <Link key={links.name} className={cn("nav__link")} href={links.url}>
-          <GetIcon icon={links.icon} className="text-xl" />
-          {links.name}
-        </Link>
-      ))}
+      {LinksMenu.map((links) => {
+        return (
+          <Link
+            key={links.name}
+            className={cn("nav__link", {
+              active: pathname === links.url,
+            })}
+            href={links.url}
+          >
+            <GetIcon icon={links.icon} className="text-xl" />
+            {links.name}
+          </Link>
+        );
+      })}
     </nav>
   );
 };
