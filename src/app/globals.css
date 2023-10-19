@@ -240,3 +240,16 @@ body,
 .slider__content-logo-icon {
   @apply text-3xl  transition duration-150;
 }
+
+/* Creativity */
+.color-framer {
+  @apply bg-orange-500;
+}
+
+.color-clean {
+  @apply bg-sky-600;
+}
+
+.color-design {
+  @apply bg-slate-400;
+}
