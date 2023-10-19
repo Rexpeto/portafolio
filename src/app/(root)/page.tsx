@@ -1,4 +1,4 @@
-import { FeaturedWork, SectionHero, SliderLogo } from "./sections";
+import { FeaturedWork, SectionHero, SliderLogo, Creativity } from "./sections";
 
 const Home = () => {
   return (
@@ -6,6 +6,7 @@ const Home = () => {
       <SectionHero />
       <SliderLogo />
       <FeaturedWork />
+      <Creativity />
     </>
   );
 };
