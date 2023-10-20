@@ -51,7 +51,7 @@ body,
 }
 
 .badges-tailwind {
-  @apply bg-[#38B2AC] text-white;
+  @apply bg-white/90 backdrop-blur-md text-sky-600 border-gray-700;
 }
 
 .badges-bash {
@@ -112,6 +112,10 @@ body,
 
 .badges-postman {
   @apply bg-[#000] text-white;
+}
+
+.badges-strapi {
+  @apply bg-[#000] text-[#4945ff];
 }
 
 /* colors tecnology */
@@ -193,6 +197,10 @@ body,
 
 .color-postman {
   @apply hover:text-[#EF5B25];
+}
+
+.color-strapi {
+  @apply hover:text-[#4945ff];
 }
 
 /* Sidebar */
