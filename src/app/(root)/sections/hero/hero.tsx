@@ -1,3 +1,4 @@
+import { OpenWork } from "@/components/ui";
 import LinksSocial from "@/components/ui/links-Social";
 import { LinkSocials } from "@/models";
 import Image from "next/image";
@@ -24,13 +25,15 @@ const SectionHero = async () => {
 
   return (
     <section className="section__container">
-      <div className="relative h-20 w-20 mb-10">
+      <div className="flex items-center justify-between mb-10">
         <Image
           className="rounded-sm object-cover"
           src={attributes?.image?.data?.attributes?.url}
           alt="Profile Carlos Gallardo"
-          fill
+          width={80}
+          height={80}
         />
+        <OpenWork working={attributes?.working} />
       </div>
       <div className="max-w-2xl">
         <h1 className="text-white text-3xl mb-5">{`${attributes?.title}`}</h1>
