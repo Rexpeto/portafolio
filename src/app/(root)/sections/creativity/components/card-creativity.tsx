@@ -12,7 +12,7 @@ interface Creatives {
   url: string;
   icon: string;
   description: string;
-  bg: string;
+  color: string;
 }
 
 const CardVentures = ({ creatives }: Props) => {
@@ -21,7 +21,7 @@ const CardVentures = ({ creatives }: Props) => {
       <div
         className={cn(
           "relative flex items-center justify-center w-10 h-10 rounded-xl space-y-1 mb-1",
-          creatives.bg,
+          creatives.color,
         )}
       >
         <GetIcon icon={creatives.icon} className="text-xl text-dark" />
