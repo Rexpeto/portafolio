@@ -118,6 +118,14 @@ body,
   @apply bg-[#000] text-[#4945ff];
 }
 
+.badges-axios {
+  @apply bg-[#000] text-white;
+}
+
+.badges-vite {
+  @apply bg-[#5EABFF]/80 text-white;
+}
+
 /* colors tecnology */
 .color-js {
   @apply hover:text-[#F0DB4F];
@@ -201,6 +209,14 @@ body,
 
 .color-strapi {
   @apply hover:text-[#4945ff];
+}
+
+.color-axios {
+  @apply hover:text-white;
+}
+
+.color-vite {
+  @apply hover:text-[#5EABFF];
 }
 
 /* Sidebar */
