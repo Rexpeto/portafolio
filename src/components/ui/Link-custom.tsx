@@ -1,13 +1,8 @@
 import Link from "next/link";
 import { GetIcon } from ".";
+import { Redes } from "@/models";
 
-interface Props {
-  name?: string;
-  url: string;
-  icon?: string;
-}
-
-const LinkCustom = ({ name, url, icon }: Props) => {
+const LinkCustom = ({ attributes: { name, icon, url } }: Redes) => {
   if (!icon) {
     return (
       <Link className="p-4 border border-gray-700/40 rounded-md" href={url}>
