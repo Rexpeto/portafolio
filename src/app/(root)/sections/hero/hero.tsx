@@ -1,29 +1,12 @@
 import { LinksSocial, OpenWork } from "@/components/ui";
 import { HeroResponse } from "@/models";
+import { getHero } from "@/services";
 import Image from "next/image";
-
-async function getData() {
-  const res = await fetch(
-    `${process.env.API_URL}/hero?populate=image&locale=en`,
-    {
-      next: { revalidate: 60 },
-    },
-  );
-  // The return value is *not* serialized
-  // You can return Date, Map, Set, etc.
-
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error("Failed to fetch data");
-  }
-
-  return res.json();
-}
 
 const SectionHero = async () => {
   const {
     data: { attributes },
-  }: HeroResponse = await getData();
+  }: HeroResponse = await getHero();
 
   return (
     <section className="section__container">
