@@ -1,29 +1,23 @@
-export const CreativyData = [
-  {
-    id: 1,
-    title: "Framer Template",
-    url: "/",
-    description:
-      "Creating Framer Template for designing, agent, and content creator",
-    icon: "AiTwotoneThunderbolt",
-    bg: "color-framer",
-  },
-  {
-    id: 2,
-    title: "Tailored design",
-    url: "/",
-    description:
-      "Creation of layout tailored to the project, providing scalable designs",
-    icon: "AiOutlineAntDesign",
-    bg: "color-design",
-  },
-  {
-    id: 3,
-    title: "Framer Template",
-    url: "/",
-    description:
-      "Creating Framer Template for designing, agent, and content creator",
-    icon: "AiOutlineCode",
-    bg: "color-clean",
-  },
-];
+import { Meta } from ".";
+
+export interface CreativityResponse {
+  data: Creativities[];
+  meta: Meta;
+}
+
+export interface Creativities {
+  id: number;
+  attributes: Creativy;
+}
+
+export interface Creativy {
+  title: string;
+  description: string;
+  icon: string;
+  color: string;
+  url: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  locale: string;
+}
