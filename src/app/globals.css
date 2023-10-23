@@ -9,7 +9,7 @@ body,
 }
 
 .title {
-  @apply text-2xl text-white my-6 font-light;
+  @apply text-2xl text-white font-light;
 }
 
 .section__container {
