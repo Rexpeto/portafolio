@@ -1,12 +1,14 @@
-import { OpenWork } from "@/components/ui";
-import LinksSocial from "@/components/ui/links-Social";
-import { LinkSocials } from "@/models";
+import { LinksSocial, OpenWork } from "@/components/ui";
+import { HeroResponse } from "@/models";
 import Image from "next/image";
 
 async function getData() {
-  const res = await fetch(`${process.env.API_URL}/hero?populate=*&locale=en`, {
-    next: { revalidate: 60 },
-  });
+  const res = await fetch(
+    `${process.env.API_URL}/hero?populate=image&locale=en`,
+    {
+      next: { revalidate: 60 },
+    },
+  );
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 
@@ -21,7 +23,7 @@ async function getData() {
 const SectionHero = async () => {
   const {
     data: { attributes },
-  } = await getData();
+  }: HeroResponse = await getData();
 
   return (
     <section className="section__container">
@@ -39,7 +41,7 @@ const SectionHero = async () => {
         <h1 className="text-white text-3xl mb-5">{`${attributes?.title}`}</h1>
         <p className="text-md">{attributes?.description}</p>
       </div>
-      <LinksSocial links={LinkSocials} />
+      <LinksSocial />
     </section>
   );
 };
