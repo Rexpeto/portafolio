@@ -1,27 +1,14 @@
 import { GetIcon } from "@/components/ui";
-
-async function getData() {
-  const res = await fetch(`${process.env.API_URL}/technologies`, {
-    next: { revalidate: 60 },
-  });
-  // The return value is *not* serialized
-  // You can return Date, Map, Set, etc.
-
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error("Failed to fetch data");
-  }
-
-  return res.json();
-}
+import { Technologies, TechnologiesResponse } from "@/models";
+import { getTecnologies } from "@/services";
 
 const SliderLogo = async () => {
-  const { data } = await getData();
+  const { data }: TechnologiesResponse = await getTecnologies();
 
   return (
     <div className="slider">
       <div className="slider__content">
-        {data.map((logo: any) => (
+        {data.map((logo: Technologies) => (
           <div className="slide slider__content-logo" key={logo.id}>
             <GetIcon
               icon={logo.attributes.icon}
@@ -29,7 +16,7 @@ const SliderLogo = async () => {
             />
           </div>
         ))}
-        {data.map((logo: any) => (
+        {data.map((logo: Technologies) => (
           <div className="slide slider__content-logo" key={logo.id}>
             <GetIcon
               icon={logo.attributes.icon}
