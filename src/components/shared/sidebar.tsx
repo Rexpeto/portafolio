@@ -15,7 +15,7 @@ const Sidebar = ({ showMenu, onClose }: Props) => {
     <>
       <aside className={cn("sidebar", showMenu ? "left-0" : "-left-full")}>
         <Link href="/" className="sidebar__link group">
-          <Image src="./logo.svg" alt="Logo" width={32} height={32} />
+          <Image src={"/logo.svg"} alt="Logo" width={32} height={32} />
           <div>
             <h1 className="sidebar__link-title">Carlos Gallardo</h1>
             <h3 className="sidebar__link-subtitle">Full Stack Developer</h3>
