@@ -2,7 +2,7 @@ import Link from "next/link";
 import { GetIcon } from ".";
 import { Redes } from "@/models";
 
-const LinkCustom = ({ attributes: { name, icon, url } }: Redes) => {
+const LinkCustom = ({ attributes: { name, icon, url } }: any) => {
   if (!icon) {
     return (
       <Link className="p-4 border border-gray-700/40 rounded-md" href={url}>
