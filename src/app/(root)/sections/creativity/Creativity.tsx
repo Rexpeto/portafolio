@@ -1,24 +1,10 @@
 import { Title } from "@/components/ui";
 import { CardCreativity } from "./components";
 import { Creativities } from "@/models";
-
-const getData = async () => {
-  const res = await fetch(`${process.env.API_URL}/creativities?locale=en`, {
-    next: { revalidate: 60 },
-  });
-  // The return value is *not* serialized
-  // You can return Date, Map, Set, etc.
-
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error("Failed to fetch data");
-  }
-
-  return res.json();
-};
+import { getCreatives } from "@/services";
 
 const Creativity = async () => {
-  const { data } = await getData();
+  const { data } = await getCreatives();
 
   return (
     <section className="section__container border-y border-gray-700/40">
