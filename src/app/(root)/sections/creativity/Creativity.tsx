@@ -1,5 +1,6 @@
 import { Title } from "@/components/ui";
 import { CardCreativity } from "./components";
+import { Creativities } from "@/models";
 
 const getData = async () => {
   const res = await fetch(`${process.env.API_URL}/creativities?locale=en`, {
@@ -23,7 +24,7 @@ const Creativity = async () => {
     <section className="section__container border-y border-gray-700/40">
       <Title title="Creativity" />
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 mb-4">
-        {data.map((creativity: any) => (
+        {data.map((creativity: Creativities) => (
           <CardCreativity
             key={creativity.id}
             creatives={creativity.attributes}

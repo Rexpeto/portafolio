@@ -1,18 +1,10 @@
 import { GetIcon } from "@/components/ui";
 import { cn } from "@/libs";
+import { Creativy } from "@/models";
 import Link from "next/link";
 
 interface Props {
-  creatives: Creatives;
-}
-
-interface Creatives {
-  id: number;
-  title: string;
-  url: string;
-  icon: string;
-  description: string;
-  color: string;
+  creatives: Creativy;
 }
 
 const CardVentures = ({ creatives }: Props) => {
