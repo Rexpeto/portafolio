@@ -4,7 +4,11 @@ import { GetIcon } from "../ui";
 import { cn } from "@/libs";
 import { usePathname } from "next/navigation";
 
-const NavSidebar = () => {
+interface Props {
+  onClose: () => void;
+}
+
+const NavSidebar = ({ onClose }: Props) => {
   const pathname = usePathname();
 
   return (
@@ -17,6 +21,7 @@ const NavSidebar = () => {
               active: pathname === links.url,
             })}
             href={links.url}
+            onClick={onClose}
           >
             <GetIcon icon={links.icon} className="text-xl" />
             {links.name}

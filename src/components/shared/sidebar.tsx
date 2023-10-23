@@ -22,13 +22,13 @@ const Sidebar = ({ showMenu, onClose }: Props) => {
           </div>
         </Link>
 
-        <NavSidebar />
+        <NavSidebar onClose={onClose} />
       </aside>
       <div
         onClick={onClose}
         className={cn(
           "bg-black/5 backdrop-blur-md z-40 left-0 top-0 w-full h-full",
-          showMenu ? "fixed overflow-hidden " : "hidden"
+          showMenu ? "fixed overflow-hidden " : "hidden",
         )}
       />
     </>
