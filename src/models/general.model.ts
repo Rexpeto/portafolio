@@ -10,3 +10,9 @@ export interface Pagination {
   pageCount: number;
   total: number;
 }
+
+export interface Localizations {
+  data: EmptyData;
+}
+
+export interface EmptyData {}
