@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { GetIcon } from ".";
-import { Redes } from "@/models";
 
 const LinkCustom = ({ attributes: { name, icon, url } }: any) => {
   if (!icon) {
