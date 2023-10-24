@@ -28,6 +28,9 @@ const config: Config = {
       backgroundImage: {
         logo: "url('/logo.svg')",
       },
+      containers: {
+        center: true,
+      },
     },
   },
   plugins: [],
