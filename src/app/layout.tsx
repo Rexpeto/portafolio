@@ -6,7 +6,7 @@ import { cn } from "@/libs";
 const font = Figtree({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Carlos Gallardo | FullStack Developer",
+  title: "Home | CDGP",
   description: "Portafolio de Carlos Gallardo",
 };
 
