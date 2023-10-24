@@ -19,4 +19,8 @@ export interface Hero {
   publishedAt: string;
   locale: string;
   image: Images;
+  cvitae: string;
+  nameCV: string;
+  noWorking: string;
+  trueWorking: string;
 }
