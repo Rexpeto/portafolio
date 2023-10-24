@@ -13,7 +13,7 @@ body,
 }
 
 .section__container {
-  @apply container lg:mx-auto px-4 mb-4;
+  @apply container mx-auto lg:mx-auto px-4 mb-4;
 }
 
 /* Scrollbar */
@@ -276,4 +276,42 @@ body,
 
 .color-design {
   @apply bg-slate-400;
+}
+
+/* Project Body */
+
+.project-body {
+  @apply mt-5 pb-3;
+}
+
+.project-body h1 {
+  @apply text-3xl my-2 text-white font-bold;
+}
+
+.project-body h2 {
+  @apply text-2xl my-2 text-white font-bold;
+}
+
+.project-body h3 {
+  @apply text-xl my-2 text-white font-bold;
+}
+
+.project-body h4 {
+  @apply text-base my-2 text-white font-bold;
+}
+
+.project-body p {
+  @apply text-lg text-white;
+}
+
+.project-body ul {
+  @apply list-disc list-inside my-4 text-white;
+}
+
+.project-body li {
+  @apply first-letter:uppercase;
+}
+
+.project-body pre {
+  @apply bg-gray-700/10 border border-gray-700/40 backdrop-blur-3xl backdrop-brightness-150 rounded-lg px-4 pt-0 pb-4 my-2;
 }
