@@ -1,5 +1,5 @@
 import { RedesResponse } from "@/models";
-import { LinkCustom } from ".";
+import { LinkIcon } from ".";
 import { getSocials } from "@/services";
 
 const LinksSocial = async () => {
@@ -8,7 +8,7 @@ const LinksSocial = async () => {
   return (
     <div className="flex items-center gap-2">
       {data.map((link) => (
-        <LinkCustom key={link.id} attributes={link.attributes} />
+        <LinkIcon key={link.id} attributes={link.attributes} />
       ))}
     </div>
   );

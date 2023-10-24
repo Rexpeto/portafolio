@@ -1,5 +1,4 @@
-import { LinksSocial, OpenWork } from "@/components/ui";
-import LinkCV from "@/components/ui/link-cv";
+import { LinkCustom, LinksSocial, OpenWork } from "@/components/ui";
 import { HeroResponse } from "@/models";
 import { getHero } from "@/services";
 import Image from "next/image";
@@ -31,7 +30,7 @@ const SectionHero = async () => {
       </div>
       <div className="flex items-center gap-4 mt-8">
         <LinksSocial />
-        <LinkCV
+        <LinkCustom
           url={attributes?.cvitae}
           title={attributes?.nameCV}
           icon="HiOutlineDocumentArrowDown"
