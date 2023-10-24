@@ -3,6 +3,7 @@ import * as Si from "react-icons/si";
 import * as Tb from "react-icons/tb";
 import * as Ai from "react-icons/ai";
 import * as Fi from "react-icons/fi";
+import * as Hi from "react-icons/hi2";
 
 interface Props {
   icon: string;
@@ -17,6 +18,7 @@ const GetIcon = ({ icon, className }: Props) => {
     iconsMap.set("Tb", Tb);
     iconsMap.set("Ai", Ai);
     iconsMap.set("Fi", Fi);
+    iconsMap.set("Hi", Hi);
 
     return iconsMap.get(iconName.substring(0, 2));
   };
