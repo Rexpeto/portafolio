@@ -1,6 +1,12 @@
 import { cn } from "@/libs";
 
-const OpenWork = ({ working }: { working: boolean }) => {
+interface Props {
+  working: boolean;
+  noWorking: string;
+  trueWorking: string;
+}
+
+const OpenWork = ({ working, noWorking, trueWorking }: Props) => {
   return (
     <div
       className={cn(
@@ -29,7 +35,7 @@ const OpenWork = ({ working }: { working: boolean }) => {
           working ? "text-green-500" : "text-red-500",
         )}
       >
-        {working ? "Available for work" : "Not available for work"}
+        {working ? trueWorking : noWorking}
       </p>
     </div>
   );
