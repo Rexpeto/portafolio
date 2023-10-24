@@ -1,8 +1,7 @@
 import { searchProject } from "@/services";
 import { redirect } from "next/navigation";
-import GoBack from "./components/goBack";
-import TechnologyTag from "@/components/ui/technology-tag";
-import { Technologies } from "@/models";
+import { richTextReducer } from "@/libs";
+import { ProjectFooter } from "./components";
 
 interface Props {
   params: {
@@ -15,18 +14,19 @@ const Page = async ({ params }: Props) => {
 
   if (!data.length) redirect("/projects");
 
-  const { title, body, technologies } = data[0].attributes;
+  const { title, body, technologies, githubUrl, previewUrl, image } =
+    data[0].attributes;
 
   return (
     <div className="section__container">
-      <div className="mb-8">
-        <GoBack back="/projects" />
-      </div>
-
-      <h2 className="text-3xl text-white font-semibold mb-3">{title}</h2>
-      {technologies?.data.map((technology: Technologies) => (
-        <TechnologyTag key={technology.id} tecnology={technology.attributes} />
-      ))}
+      <ProjectFooter
+        title={title}
+        technologies={technologies}
+        githubUrl={githubUrl}
+        previewUrl={previewUrl}
+        image={image}
+      />
+      {richTextReducer(body)}
     </div>
   );
 };
