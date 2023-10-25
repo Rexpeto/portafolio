@@ -1,2 +1,2 @@
-export { default as ProjectFooter } from "./project-footer";
+export { default as ProjectHeader } from "./project-header";
 export { default as GoBack } from "./goBack";
