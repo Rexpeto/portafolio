@@ -1,3 +1,4 @@
+import { TransitionSection } from "@/components/shared";
 import { LinkCustom, LinksSocial, OpenWork } from "@/components/ui";
 import { HeroResponse } from "@/models";
 import { getHero } from "@/services";
@@ -9,7 +10,7 @@ const SectionHero = async () => {
   }: HeroResponse = await getHero();
 
   return (
-    <section className="section__container">
+    <TransitionSection>
       <div className="flex items-center justify-between mb-10">
         <Image
           className="rounded-sm object-cover"
@@ -36,7 +37,7 @@ const SectionHero = async () => {
           icon="HiOutlineDocumentArrowDown"
         />
       </div>
-    </section>
+    </TransitionSection>
   );
 };
 
