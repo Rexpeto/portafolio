@@ -5,3 +5,4 @@ export * from "./hero.model";
 export * from "./technologies.model";
 export * from "./general.model";
 export * from "./images.model";
+export * from "./about.model";
