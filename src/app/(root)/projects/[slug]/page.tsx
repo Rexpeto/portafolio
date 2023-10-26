@@ -1,7 +1,7 @@
 import { searchProject } from "@/services";
 import { redirect } from "next/navigation";
 import { richTextReducer } from "@/libs";
-import { ProjectFooter } from "./components";
+import { ProjectHeader } from "./components";
 
 interface Props {
   params: {
@@ -19,7 +19,7 @@ const Page = async ({ params }: Props) => {
 
   return (
     <div className="section__container">
-      <ProjectFooter
+      <ProjectHeader
         title={title}
         technologies={technologies}
         githubUrl={githubUrl}
