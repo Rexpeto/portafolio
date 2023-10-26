@@ -16,6 +16,7 @@ const config: Config = {
       },
       animation: {
         ["infinite-slider"]: "infiniteSlider 20s linear infinite",
+        ["heartBeat"]: "heartBeat 1s infinite",
       },
       keyframes: {
         infiniteSlider: {
@@ -23,6 +24,13 @@ const config: Config = {
           "100%": {
             transform: "translateX(calc(-250px * 5))",
           },
+        },
+        heartBeat: {
+          "0%": { transform: "scale(1)" },
+          "14%": { transform: "scale(1.3)" },
+          "28%": { transform: "scale(1)" },
+          "42%": { transform: "scale(1.3)" },
+          "70%": { transform: "scale(1)" },
         },
       },
       backgroundImage: {
