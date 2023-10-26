@@ -27,7 +27,7 @@ const SectionHero = async () => {
       </div>
       <div className="max-w-2xl">
         <h1 className="text-white text-3xl mb-5">{`${attributes?.title}`}</h1>
-        <p className="text-md">{attributes?.description}</p>
+        <p>{attributes?.description}</p>
       </div>
       <div className="flex items-center gap-4 mt-8">
         <LinksSocial />

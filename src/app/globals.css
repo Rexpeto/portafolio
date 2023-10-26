@@ -300,10 +300,6 @@ body,
   @apply text-base my-2 text-white font-bold;
 }
 
-.project-body p {
-  @apply text-lg text-white;
-}
-
 .project-body ul {
   @apply list-disc list-inside my-4 text-white;
 }
