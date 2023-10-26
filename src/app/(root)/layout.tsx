@@ -1,6 +1,6 @@
 "use client";
 
-import { Sidebar } from "@/components/shared";
+import { Footer, Sidebar } from "@/components/shared";
 import { GetIcon } from "@/components/ui";
 import { useState } from "react";
 
@@ -22,7 +22,10 @@ export default function MainLayout({
         <GetIcon icon="RiMenuLine" className="text-xl" />
       </button>
 
-      <main className="lg:pl-[16vw] h-full py-5 lg:py-8">{children}</main>
+      <main className="lg:pl-[16vw] h-full py-5 lg:py-8">
+        {children}
+        <Footer />
+      </main>
     </>
   );
 }
