@@ -11,6 +11,12 @@ interface Props {
 }
 
 const Sidebar = ({ showMenu, onClose }: Props) => {
+  if (showMenu) {
+    document.body.classList.add("overflow-hidden");
+  } else {
+    document.body.classList.remove("overflow-hidden");
+  }
+
   return (
     <>
       <aside className={cn("sidebar", showMenu ? "left-0" : "-left-full")}>
