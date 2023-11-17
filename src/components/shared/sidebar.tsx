@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { NavSidebar } from ".";
 import { cn } from "@/libs";
+import { useEffect } from "react";
 
 interface Props {
   showMenu: boolean;
@@ -11,11 +12,13 @@ interface Props {
 }
 
 const Sidebar = ({ showMenu, onClose }: Props) => {
-  if (showMenu) {
-    document.body.classList.add("overflow-hidden");
-  } else {
-    document.body.classList.remove("overflow-hidden");
-  }
+  useEffect(() => {
+    if (showMenu) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [showMenu]);
 
   return (
     <>
