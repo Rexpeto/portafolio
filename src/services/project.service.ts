@@ -20,7 +20,7 @@ export const getProjectsLimit = async (quantity: number) => {
 //? returns a list of projects
 export const getProjects = async () => {
   const res = await fetch(
-    `${process.env.API_URL}/projects?populate=*&locale=en`,
+    `${process.env.API_URL}/projects?populate=*&locale=en&sort[1]=id:desc`,
     { next: { revalidate: 60 } },
   );
 
