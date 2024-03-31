@@ -2,14 +2,10 @@
 import { CardWork } from "@/components/ui";
 import { ProjectData } from "@/models";
 import { Pagination } from "@nextui-org/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const GridWorks = ({ data, meta }: any) => {
   const [pageSelect, setPageSelect] = useState(1);
-
-  useEffect(() => {
-    console.log(pageSelect);
-  }, [pageSelect]);
 
   return (
     <>
