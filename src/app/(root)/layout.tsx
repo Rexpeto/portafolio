@@ -2,6 +2,7 @@
 
 import { Footer, Sidebar } from "@/components/shared";
 import { GetIcon } from "@/components/ui";
+import { NextUIProvider } from "@nextui-org/react";
 import { useState } from "react";
 
 export default function MainLayout({
@@ -12,7 +13,7 @@ export default function MainLayout({
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <>
+    <NextUIProvider>
       <Sidebar showMenu={showMenu} onClose={() => setShowMenu(false)} />
 
       <button
@@ -26,6 +27,6 @@ export default function MainLayout({
         {children}
         <Footer />
       </main>
-    </>
+    </NextUIProvider>
   );
 }

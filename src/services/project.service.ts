@@ -18,9 +18,9 @@ export const getProjectsLimit = async (quantity: number) => {
 };
 
 //? returns a list of projects
-export const getProjects = async () => {
+export const getProjects = async (page: number = 1) => {
   const res = await fetch(
-    `${process.env.API_URL}/projects?populate=*&locale=en&sort[1]=id:desc`,
+    `${process.env.API_URL}/projects?populate=*&locale=en&pagination[page]=${page}&pagination[pageSize]=6`,
     { next: { revalidate: 60 } },
   );
 
