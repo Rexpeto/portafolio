@@ -4,6 +4,7 @@ import { AboutResponse } from "@/models";
 import { getAbout } from "@/services";
 import Image from "next/image";
 import AboutContent from "./components/Transition-image";
+import FriendSection from "../sections/friends/friendSection";
 
 const Page = async () => {
   const { data }: AboutResponse = await getAbout();
@@ -22,6 +23,8 @@ const Page = async () => {
         />
       </AboutContent>
       {body && richTextReducer(body)}
+
+      <FriendSection />
     </>
   );
 };
